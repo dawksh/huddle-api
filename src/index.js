@@ -29,9 +29,7 @@ app.post("/api/getHuddle/:contract", (req, res) => {
 				},
 			}
 		)
-		.then((res) => console.log(res.data?.meetingLink));
-	console.log(req.params.contract);
-	res.sendStatus(200);
+		.then((res) => res.send(res.data?.meetingLink));
 });
 
 app.listen(PORT, () => {
