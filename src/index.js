@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
 	res.send("Hi mom");
 });
 
-app.post("/api/getHuddle/:contract", (req, res) => {
+app.get("/api/getHuddle/:contract", (req, res) => {
 	axios
 		.post(
 			huddleAPI,
