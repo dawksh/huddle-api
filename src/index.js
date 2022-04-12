@@ -16,6 +16,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/api/getHuddle/:contract", (req, res) => {
+	console.log("NFT Contract: ", req.params.contract);
 	axios
 		.post(
 			huddleAPI,
