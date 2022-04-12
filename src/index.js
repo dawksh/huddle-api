@@ -23,6 +23,8 @@ app.get("/api/getHuddle/:contract", (req, res) => {
 			{
 				title: "Metapass Event",
 				contractAd1: req.params.contract,
+				chain: "polygon",
+				host: "0x28172273CC1E0395F3473EC6eD062B6fdFb15940",
 			},
 			{
 				headers: {
