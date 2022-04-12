@@ -29,11 +29,12 @@ app.get("/api/getHuddle/:contract", (req, res) => {
 				},
 			}
 		)
-		.then((el) =>
+		.then((el) => {
+			console.log(el.data?.roomId);
 			res.send({
 				roomId: el.data?.roomId,
-			})
-		);
+			});
+		});
 });
 
 app.listen(PORT, () => {
