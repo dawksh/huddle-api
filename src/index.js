@@ -46,12 +46,12 @@ app.get("/api/getHuddle/:contract", (req, res) => {
 });
 
 app.post("/", (req, res) => {
-	const { contractAddress, host } = req.body;
+	const { title, contractAddress, host } = req.body;
 	axios
 		.post(
 			huddleAPI,
 			{
-				title: "Metapass Event",
+				title: title,
 				contractAd1: contractAddress,
 				chain: "polygon",
 				host: host,
