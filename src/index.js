@@ -47,6 +47,7 @@ app.get("/api/getHuddle/:contract", (req, res) => {
 
 app.post("/", (req, res) => {
 	const { title, contractAddress, host } = req.body;
+	console.log(title, contractAddress, host)
 	axios
 		.post(
 			huddleAPI,
@@ -63,7 +64,6 @@ app.post("/", (req, res) => {
 			}
 		)
 		.then((el) => {
-			console.log(el.data?.meetingLink);
 			res.send({
 				meetingLink: el.data?.meetingLink,
 			});
